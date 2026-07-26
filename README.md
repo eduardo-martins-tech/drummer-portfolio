@@ -1,16 +1,55 @@
-# React + Vite
+# 🥁 Drummer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio desenvolvido para apresentar a trajetória do baterista Eduardo Martins.
 
-Currently, two official plugins are available:
+## Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O objetivo deste projeto é reunir em um único lugar:
 
-## React Compiler
+- História profissional
+- Principais trabalhos
+- Galeria de fotos
+- Performances em vídeo
+- Áudios
+- Contato
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O site está sendo desenvolvido com React e Vite, priorizando performance, responsividade e uma identidade visual moderna para apresentar a carreira e os principais trabalhos realizados ao longo de mais de 20 anos na música.
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Git
+- GitHub
+
+## Status
+
+🚧 Em desenvolvimento
+
+## Roadmap
+
+### Concluído
+
+- [x] Estrutura inicial em React + Vite
+- [x] Navbar
+- [x] Hero
+
+### Em desenvolvimento
+
+- [ ] Home completa
+- [ ] Hero responsivo
+- [ ] Responsividade
+- [ ] Linha do tempo da carreira
+- [ ] Galeria de fotos
+- [ ] Áudios
+- [ ] Área de performances
+- [ ] Página História
+- [ ] Página Contato
+- [ ] Deploy
+
+## Autor
+
+**Eduardo Martins**
