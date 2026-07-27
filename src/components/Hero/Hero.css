@@ -1,5 +1,5 @@
 .hero{
-    height: 70vh;
+    
 
     display: flex;
     align-items: center;
@@ -14,22 +14,25 @@
     font-size: 3.7rem;
     font-weight: 700;
     word-spacing: 4px;
+    line-height:1;
 }
 
 .hero p{
     color:white;
-    font-size:1.1rem;
-    line-height:1.8;
+    font-size:1.18rem;
+    line-height:1.9;
     
-    letter-spacing: 0.3px;
-    margin-top: auto;
+    letter-spacing: .3px;
+    margin: 0;
 }
 
 
 .hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:cover;
+    object-position: center 5%;
+    
 }
 
 .white{
@@ -44,14 +47,15 @@
 .hero-title{
     position: absolute;
     left: 80px;
-    top: 65px;
+    top: 90px;
 }
 
 .hero-subtitle{
     position: absolute;
     left: 80px;
-    bottom: 15px;
-    max-width: 300px;
+    top: 170px;
+    
+    max-width: 290px;
 }
 
 .hero::before{
@@ -71,6 +75,7 @@
 }
 
 .hero-title,
+
 .hero-subtitle{
     z-index:2;
 }

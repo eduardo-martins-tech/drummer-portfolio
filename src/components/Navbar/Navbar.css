@@ -4,9 +4,9 @@ nav {
   align-items: center;
 
   width: 100%;
-  padding: 20px 60px;
+  padding: 14px 60px;
 
-  background-color: #0A0A0A;
+  background: #0A0A0A;
 
   box-sizing: border-box;
 
@@ -28,11 +28,34 @@ nav ul{
 }
 
 nav li {
+    position: relative;
+
     color: #F2F2F2;
     font-weight: 400;
     cursor: pointer;
+
+    transition: color .3s ease;
+}
+
+nav li::after{
+    content: "";
+
+    position: absolute;
+    left: 0%;
+    bottom: -4px;
+
+    width: 0;
+    height: 1.8px;
+
+    background: #566FCF;
+
+    transition: width .3s ease;
 }
 
 nav li:hover {
-    color: #5F73FF;
+    color: #566FCF;
+}
+
+nav li:hover::after{
+    width: 100%;
 }
