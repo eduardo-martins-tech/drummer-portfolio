@@ -1,5 +1,6 @@
 import "./Hero.css";
 import heroImage from "../../assets/hero.png";
+import HeroBackgroundText from "../HeroBackgroundText/HeroBackgroundText";
 
 function Hero() {
   return (
@@ -23,6 +24,7 @@ function Hero() {
           palcos e grandes encontros.
         </p>
       </div>
+      <HeroBackgroundText />
     </section>
   );
 }
