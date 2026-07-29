@@ -1,0 +1,35 @@
+.chapter-card {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 180px 60px 120px;
+
+    gap: 90px;
+}
+
+.chapter-image {
+    flex: 0 0 46%;
+}
+
+.chapter-content {
+    width: 320px;
+    flex: none;
+}
+
+
+.chapter-content p {
+    color:#d5d5d5;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    max-width:320px;
+}

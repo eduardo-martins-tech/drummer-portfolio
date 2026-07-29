@@ -1,13 +1,13 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import IntroDivider from "./components/HeroBackgroundText/HeroBackgroundText";
+import Highlights from "./components/Highlights/Highlights";
 
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
-      
+      <Highlights />
     </>
   );
 }

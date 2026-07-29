@@ -1,6 +1,5 @@
 import "./Hero.css";
-import heroImage from "../../assets/hero.png";
-import HeroBackgroundText from "../HeroBackgroundText/HeroBackgroundText";
+import heroImage from "../../assets/images/hero.png";import HeroBackgroundText from "../HeroBackgroundText/HeroBackgroundText";
 
 function Hero() {
   return (
