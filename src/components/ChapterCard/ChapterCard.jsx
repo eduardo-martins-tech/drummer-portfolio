@@ -3,7 +3,6 @@ import "./ChapterCard.css";
 function ChapterCard({
   image,
   alt,
-  title,
   text,
   imagePosition = "left",
 }) {
@@ -14,7 +13,6 @@ function ChapterCard({
       </div>
 
       <div className="chapter-content">
-        {title && <h3>{title}</h3>}
         <p>{text}</p>
       </div>
     </section>

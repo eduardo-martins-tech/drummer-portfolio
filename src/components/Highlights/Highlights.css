@@ -1,4 +1,15 @@
-.highlights {
-  min-height: 100vh;
-  background: #000;
+.highlights-dark {
+    background: #000;
+}
+
+.highlights-dark .chapter-content p {
+    color: #d5d5d5;
+}
+
+.highlights-light {
+    background: #fff;
+}
+
+.highlights-light .chapter-content p {
+    color: #2d2d2d;
 }

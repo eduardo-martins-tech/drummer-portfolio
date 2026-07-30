@@ -1,21 +1,28 @@
 .chapter-card {
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     max-width: 1300px;
-
     margin: 0 auto;
 
-    padding: 180px 60px 120px;
+     padding: 120px 60px;
 
     gap: 90px;
 }
 
+/* Inverte a posição da foto */
+.chapter-card.right {
+    flex-direction: row-reverse;
+}
+
 .chapter-image {
     flex: 0 0 46%;
+}
+
+.chapter-image img {
+    width: 100%;
+    display: block;
 }
 
 .chapter-content {
@@ -23,13 +30,8 @@
     flex: none;
 }
 
-
 .chapter-content p {
-    color:#d5d5d5;
-
-    font-size:1.2rem;
-
-    line-height:1.8;
-
-    max-width:320px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 320px;
 }
