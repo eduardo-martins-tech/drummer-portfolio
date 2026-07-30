@@ -5,6 +5,7 @@ import ChapterDivider from "../ChapterDivider/ChapterDivider";
 import discoOuro from "../../assets/images/disco-ouro.png";
 import michaelSullivan from "../../assets/images/michael-sullivan.png";
 import supernovaVida from "../../assets/images/supernovavida.png";
+import pingo from "../../assets/images/pingo.png";
 
 function Highlights() {
   return (
@@ -35,6 +36,15 @@ function Highlights() {
           title="Supernova Vida"
           text="Supernovavida foi um dos projetos mais marcantes da sua trajetória, reunindo anos de dedicação, composições, gravações e apresentações. Um período que contribuiu significativamente para sua formação musical e artística."
         />
+
+        <ChapterDivider />
+
+        <ChapterCard
+        image={pingo}
+        imagePosition="right"
+        imageClass="chapter-image-collage"
+        text="Ao lado do produtor ''Jonathas Pingo'', parceiro em diversos projetos e uma das grandes referências da produção musical brasileira. Uma amizade construída ao longo dos anos por meio da música, marcada pela confiança, pela troca de experiências e pela participação em importantes trabalhos."
+  />       
       </section>
     </>
   );
