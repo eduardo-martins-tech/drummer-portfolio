@@ -6,7 +6,7 @@
     max-width: 1300px;
     margin: 0 auto;
 
-     padding: 120px 60px;
+    padding: 120px 60px;
 
     gap: 90px;
 }
@@ -39,4 +39,38 @@
 .chapter-image-collage img {
     max-height: 300px;
     object-fit: cover;
+}
+
+.chapter-title{
+
+    color:#4D63C7;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    width:fit-content;
+
+    margin-bottom:28px;
+
+}
+
+.chapter-title::after{
+
+    content:"";
+
+    display:block;
+
+    width:40px;
+
+    height:2px;
+
+    background:#4D63C7;
+
+    margin-top:12px;
+
 }

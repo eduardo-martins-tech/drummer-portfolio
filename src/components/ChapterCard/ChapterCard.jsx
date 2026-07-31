@@ -1,6 +1,7 @@
 import "./ChapterCard.css";
 
 function ChapterCard({
+  title,
   image,
   alt,
   text,
@@ -14,6 +15,10 @@ function ChapterCard({
       </div>
 
       <div className="chapter-content">
+        <h3 className="chapter-title">
+        {title}
+        </h3>
+
         <p>{text}</p>
       </div>
     </section>

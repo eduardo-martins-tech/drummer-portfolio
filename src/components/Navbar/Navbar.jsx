@@ -13,7 +13,7 @@ function Navbar() {
             História
         </li>
         <li>
-            Vídeos
+            Áudios
         </li>
         <li>
             Galeria
@@ -22,7 +22,7 @@ function Navbar() {
             Performances
         </li>
         <li>
-            Contato
+            Banda
         </li>
       </ul>
     </nav>
