@@ -1,21 +1,30 @@
 # 🥁 Drummer Portfolio
 
-Portfólio desenvolvido para apresentar a trajetória do baterista Eduardo Martins.
+Portfólio desenvolvido para apresentar a trajetória do baterista **Eduardo Martins**, reunindo mais de 20 anos de carreira em um ambiente moderno, responsivo e de fácil navegação.
 
-## Sobre o projeto
+---
 
-O objetivo deste projeto é reunir em um único lugar:
+## 📖 Sobre o projeto
+
+O Drummer Portfolio foi criado para centralizar os principais momentos da carreira de Eduardo Martins, incluindo artistas, bandas, gravações em estúdio, apresentações ao vivo e produções audiovisuais.
+
+O projeto está sendo desenvolvido com foco em uma experiência visual elegante, valorizando o conteúdo e a narrativa da trajetória profissional.
+
+---
+
+## ✨ Funcionalidades
 
 - História profissional
-- Principais trabalhos
-- Galeria de fotos
+- Capítulos da trajetória musical
+- Destaques da carreira
 - Performances em vídeo
+- Galeria de fotos
 - Áudios
 - Contato
 
-O site está sendo desenvolvido com React e Vite, priorizando performance, responsividade e uma identidade visual moderna para apresentar a carreira e os principais trabalhos realizados ao longo de mais de 20 anos na música.
+---
 
-## Tecnologias
+## 🚀 Tecnologias
 
 - React
 - Vite
@@ -25,31 +34,41 @@ O site está sendo desenvolvido com React e Vite, priorizando performance, respo
 - Git
 - GitHub
 
-## Status
+---
+
+## 📌 Status do Projeto
 
 🚧 Em desenvolvimento
 
-## Roadmap
+### ✅ Concluído
 
-### Concluído
+- Estrutura inicial em React + Vite
+- Navbar
+- Hero
+- Homepage completa
+- Seção de destaques
+- Capítulos da trajetória
+- Área de performances em vídeo
+- Footer
 
-- [x] Estrutura inicial em React + Vite
-- [x] Navbar
-- [x] Hero
+---
 
-### Em desenvolvimento
+## 🛣️ Roadmap
 
-- [ ] Home completa
-- [ ] Hero responsivo
-- [ ] Responsividade
-- [ ] Linha do tempo da carreira
-- [ ] Galeria de fotos
-- [ ] Áudios
-- [ ] Área de performances
+### Próximas etapas
+
+- [ ] Página Performances
 - [ ] Página História
+- [ ] Página Áudios
+- [ ] Página Banda
+- [ ] Galeria de fotos
 - [ ] Página Contato
+- [ ] Responsividade completa
+- [ ] SEO
 - [ ] Deploy
 
-## Autor
+---
+
+## 👨‍💻 Autor
 
 **Eduardo Martins**
