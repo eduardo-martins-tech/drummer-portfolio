@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -7,7 +8,7 @@ function Navbar() {
 
       <ul>
         <li>
-            Início
+            <Link to="/">Início</Link>
         </li>
         <li>
             História
@@ -19,7 +20,7 @@ function Navbar() {
             Galeria
         </li>
         <li>
-            Performances
+            <Link to="/performances">Performances</Link>
         </li>
         <li>
             Banda

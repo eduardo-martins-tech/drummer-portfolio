@@ -1,19 +1,11 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Highlights from "./components/Highlights/Highlights";
-import Videos from "./components/Videos/Videos";
-import Footer from "./components/Footer/Footer";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Highlights />
-      <Videos />
-      <Footer />
-
-    </>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 }
 
