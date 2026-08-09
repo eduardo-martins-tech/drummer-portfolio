@@ -1,12 +1,12 @@
 .chapter-divider {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0px 60px;
+    max-width: 700px;
+    margin: 0 left;
+    padding: 0px 200px;
 }
 
 .chapter-divider::after {
     content: "";
     display: block;
-    height: 1px;
-    background: #d9d9d9;
+    height: 1.2px;
+    background: #4D63C7;
 }
