@@ -1,7 +1,11 @@
+import "./PerformanceHero.css";
+
 function PerformanceHero() {
   return (
     <section className="performance-hero">
-      <h1>Performances</h1>
+      <div className="performance-hero-content">
+        
+      </div>
     </section>
   );
 }
