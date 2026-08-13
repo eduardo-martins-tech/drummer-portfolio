@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -8,22 +8,29 @@ function Navbar() {
 
       <ul>
         <li>
-            <Link to="/">Início</Link>
+          <Link to="/">Início</Link>
         </li>
         <li>
-            História
+          História
         </li>
         <li>
-            Áudios
+          Áudios
         </li>
         <li>
-            Galeria
+          Galeria
         </li>
         <li>
-            <Link to="/performances">Performances</Link>
+          <NavLink
+            to="/performances"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Performances
+          </NavLink>
         </li>
         <li>
-            Banda
+          Banda
         </li>
       </ul>
     </nav>

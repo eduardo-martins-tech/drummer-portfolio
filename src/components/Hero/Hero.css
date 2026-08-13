@@ -7,7 +7,7 @@
     padding: 0px;
 
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     
 }
 
@@ -33,7 +33,7 @@
     height: 100%;
     object-fit:cover;
     object-position: center 5%;
-    
+        
 }
 
 .white{
@@ -79,4 +79,38 @@
 
 .hero-subtitle{
     z-index:2;
+}
+
+.hero-scroll-overlay {
+  position: absolute;
+  inset: 0;
+
+  background-color: #000000;
+  opacity: 0.45;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.hero-title,
+.hero-subtitle {
+  z-index: 3;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, var(--hero-darkness, 0));
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.hero-title,
+.hero-subtitle {
+  z-index: 2;
 }

@@ -1,9 +1,33 @@
+import { useEffect, useState } from "react";
 import "./Hero.css";
-import heroImage from "../../assets/images/hero.png";import HeroBackgroundText from "../HeroBackgroundText/HeroBackgroundText";
+
+import heroImage from "../../assets/images/hero.png";
+import HeroBackgroundText from "../HeroBackgroundText/HeroBackgroundText";
 
 function Hero() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const heroDarkness = Math.min(scrollY / 500, 0.45);
+
   return (
-    <section className="hero">
+    <section
+      className="hero"
+      style={{
+        "--hero-darkness": heroDarkness,
+      }}
+    >
       <img
         src={heroImage}
         alt="Eduardo Martins durante apresentação"
@@ -23,6 +47,7 @@ function Hero() {
           palcos e grandes encontros.
         </p>
       </div>
+
       <HeroBackgroundText />
     </section>
   );

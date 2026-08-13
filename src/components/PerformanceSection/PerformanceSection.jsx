@@ -16,31 +16,20 @@ function PerformanceSection() {
             <div className="performance-videos">
               {performance.videos.map((video, videoIndex) => (
                 <article
-                  className={`performance-video performance-video-${videoIndex + 1}`}
-                  key={video.youtubeId}
-                >
-                  <h3>{video.title}</h3>
+  className="performance-video"
+  key={video.youtubeId}
+>
+  <h3>{video.title}</h3>
 
-                  <a
-                    href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="performance-video-link"
-                  >
-                    <div className="performance-video-thumbnail">
-
-                      <img
-                        src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
-                        alt={video.title}
-                      />
-
-                      <div className="performance-play">
-                        ▶
-                      </div>
-
-                    </div>
-                  </a>
-                </article>
+  <div className="performance-video-frame">
+    <iframe
+      src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0`}
+      title={video.title}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </div>
+</article>
               ))}
             </div>
 
