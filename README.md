@@ -21,6 +21,10 @@ O projeto está sendo desenvolvido com foco em uma experiência visual elegante,
 - Galeria de fotos
 - Áudios
 - Contato
+- Navegação entre páginas com React Router
+- Vídeos do YouTube incorporados
+- Efeitos de interação e scroll
+- Navegação responsiva em desenvolvimento
 
 ---
 
@@ -31,8 +35,20 @@ O projeto está sendo desenvolvido com foco em uma experiência visual elegante,
 - JavaScript (ES6+)
 - HTML5
 - CSS3
+- React Router
 - Git
 - GitHub
+- GitHub Actions
+- GitHub Pages
+- YouTube Embed
+
+---
+
+## 🌐 Projeto publicado
+
+O projeto está disponível online:
+
+👉 https://eduardo-martins-tech.github.io/drummer-portfolio/
 
 ---
 
@@ -44,12 +60,20 @@ O projeto está sendo desenvolvido com foco em uma experiência visual elegante,
 
 - Estrutura inicial em React + Vite
 - Navbar
+- Navegação com React Router
 - Hero
+- Efeito de escurecimento no scroll
 - Homepage completa
 - Seção de destaques
 - Capítulos da trajetória
 - Área de performances em vídeo
+- Integração com vídeos do YouTube
+- Efeitos de hover nos vídeos
 - Footer
+- Página Performances
+- Navegação entre Home e Performances
+- Deploy no GitHub Pages
+- Deploy automatizado com GitHub Actions
 
 ---
 
@@ -57,7 +81,6 @@ O projeto está sendo desenvolvido com foco em uma experiência visual elegante,
 
 ### Próximas etapas
 
-- [ ] Página Performances
 - [ ] Página História
 - [ ] Página Áudios
 - [ ] Página Banda
@@ -65,10 +88,22 @@ O projeto está sendo desenvolvido com foco em uma experiência visual elegante,
 - [ ] Página Contato
 - [ ] Responsividade completa
 - [ ] SEO
-- [ ] Deploy
 
 ---
 
-## 👨‍💻 Autor
+## ⚙️ Deploy
 
-**Eduardo Martins**
+O projeto utiliza **GitHub Actions** para realizar o build e deploy automaticamente no **GitHub Pages** a cada atualização na branch `main`.
+
+Fluxo:
+
+```text
+Push na main
+     ↓
+GitHub Actions
+     ↓
+npm install
+     ↓
+npm run build
+     ↓
+GitHub Pages
