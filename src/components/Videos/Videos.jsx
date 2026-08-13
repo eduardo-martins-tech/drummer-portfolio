@@ -1,13 +1,14 @@
 import "./Videos.css";
+import { Link } from "react-router-dom";
 
 function Videos() {
   return (
     <section className="videos-section">
 
       <div className="videos-link-wrapper">
-        <a href="/performances" className="videos-link">
+        <Link to="/performances" className="videos-link">
           Explore mais performances →
-        </a>
+        </Link>
       </div>
 
       <div className="videos-grid">
@@ -26,13 +27,13 @@ function Videos() {
           </p>
 
           <div className="video-frame">
-  <iframe
-    src="https://www.youtube.com/embed/08Xyu8lZVs4"
-    title="Debaixo do Meu Pé"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  />
-</div>
+            <iframe
+              src="https://www.youtube.com/embed/08Xyu8lZVs4"
+              title="Debaixo do Meu Pé"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
 
         </article>
 
@@ -50,13 +51,13 @@ function Videos() {
           </p>
 
           <div className="video-frame">
-  <iframe
-    src="https://www.youtube.com/embed/ayRftryJlig"
-    title="Não Para Não"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  />
-</div>
+            <iframe
+              src="https://www.youtube.com/embed/ayRftryJlig"
+              title="Não Para Não"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
 
         </article>
 
