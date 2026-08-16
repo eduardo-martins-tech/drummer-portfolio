@@ -36,7 +36,7 @@ const audios = [
     title: "Eu Vou pra Cima",
     artist: "DD Junior",
     cover: ddJunior,
-    preview: null,
+    preview: "audio/dd-junior-preview.mp3",
     spotifyUrl: "",
   },
 

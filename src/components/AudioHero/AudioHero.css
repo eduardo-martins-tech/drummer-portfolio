@@ -51,7 +51,7 @@
 .audio-hero-label {
   display: block;
   margin-bottom: 14px;
-  color: #4d63c7;
+  color: #fffff;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -59,7 +59,7 @@
 
 .audio-hero h1 {
   margin: 0;
-  color: #ffffff;
+  color: #4d63c7;
   font-size: clamp(2.8rem, 4vw, 4.3rem);
   line-height: 0.95;
   letter-spacing: 0.04em;

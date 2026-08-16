@@ -13,6 +13,8 @@ import audios from "../../data/audios";
 
 function Audios() {
   const [currentAudio, setCurrentAudio] = useState(audios[0]);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
   const [activeFilter, setActiveFilter] = useState("TODOS");
 
   function handlePlayAudio(audio) {
@@ -20,26 +22,26 @@ function Audios() {
   }
 
   const mainArtists = [
-  "DD JUNIOR",
-  "LEX",
-  "MARCELA TAÍS",
-  "NÁDIA SANTOLLI",
-  "SUPERNOVAVIDA",
-  "HÉLIO BORGES",
-];
+    "DD JUNIOR",
+    "LEX",
+    "MARCELA TAÍS",
+    "NÁDIA SANTOLLI",
+    "SUPERNOVAVIDA",
+    "HÉLIO BORGES",
+  ];
 
-const filteredAudios =
-  activeFilter === "TODOS"
-    ? audios
-    : activeFilter === "OUTROS"
-      ? audios.filter(
-          (audio) =>
-            !mainArtists.includes(audio.artist.toUpperCase())
-        )
-      : audios.filter(
-          (audio) =>
-            audio.artist.toUpperCase() === activeFilter
-        );
+  const filteredAudios =
+    activeFilter === "TODOS"
+      ? audios
+      : activeFilter === "OUTROS"
+        ? audios.filter(
+            (audio) =>
+              !mainArtists.includes(audio.artist.toUpperCase())
+          )
+        : audios.filter(
+            (audio) =>
+              audio.artist.toUpperCase() === activeFilter
+          );
 
   return (
     <main className="audios-page">
@@ -59,6 +61,16 @@ const filteredAudios =
             key={audio.id}
             audio={audio}
             onPlay={() => handlePlayAudio(audio)}
+            currentTime={
+              currentAudio.id === audio.id
+                ? currentTime
+                : 0
+            }
+            duration={
+              currentAudio.id === audio.id
+                ? duration
+                : 0
+            }
           />
         ))}
       </section>
@@ -68,6 +80,8 @@ const filteredAudios =
       <AudioPlayer
         key={currentAudio.id}
         audio={currentAudio}
+        onTimeUpdate={setCurrentTime}
+        onDurationChange={setDuration}
       />
 
     </main>

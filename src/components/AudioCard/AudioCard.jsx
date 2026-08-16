@@ -1,6 +1,30 @@
 import "./AudioCard.css";
 
-function AudioCard({ audio, onPlay }) {
+function AudioCard({
+  audio,
+  onPlay,
+  currentTime,
+  duration,
+}) {
+
+  const formatTime = (time) => {
+    if (!Number.isFinite(time)) {
+      return "00:00";
+    }
+
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+
+    return `${String(minutes).padStart(2, "0")}:${String(
+      seconds
+    ).padStart(2, "0")}`;
+  };
+
+  const progressPercentage =
+    duration > 0
+      ? (currentTime / duration) * 100
+      : 0;
+
   return (
     <article className="audio-card">
 
@@ -28,12 +52,16 @@ function AudioCard({ audio, onPlay }) {
         <p>{audio.artist}</p>
 
         <div className="audio-card-progress">
-          <span></span>
+          <span
+            style={{
+              width: `${progressPercentage}%`,
+            }}
+          ></span>
         </div>
 
         <div className="audio-card-meta">
-          <span>00:00</span>
-          <span>00:30</span>
+          <span>{formatTime(currentTime)}</span>
+          <span>-{formatTime(duration - currentTime)}</span>
         </div>
 
         <button
