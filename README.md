@@ -1,14 +1,18 @@
 # 🥁 Drummer Portfolio
 
-Portfólio desenvolvido para apresentar a trajetória do baterista **Eduardo Martins**, reunindo mais de 20 anos de carreira em um ambiente moderno, responsivo e de fácil navegação.
+Portfólio desenvolvido para apresentar a trajetória do baterista **Eduardo Martins**, reunindo mais de 20 anos de carreira em uma experiência visual moderna, responsiva e de fácil navegação.
+
+O projeto também funciona como um projeto prático de desenvolvimento front-end, explorando componentização, gerenciamento de estado, interação com APIs nativas do navegador e organização de uma aplicação React.
 
 ---
 
 ## 📖 Sobre o projeto
 
-O Drummer Portfolio foi criado para centralizar os principais momentos da carreira de Eduardo Martins, incluindo artistas, bandas, gravações em estúdio, apresentações ao vivo e produções audiovisuais.
+O Drummer Portfolio foi criado para centralizar os principais momentos da carreira de Eduardo Martins, incluindo artistas, bandas, gravações em estúdio, apresentações ao vivo, produções audiovisuais e registros musicais.
 
-O projeto está sendo desenvolvido com foco em uma experiência visual elegante, valorizando o conteúdo e a narrativa da trajetória profissional.
+O projeto está sendo desenvolvido com foco em uma experiência visual cinematográfica e orientada à narrativa, valorizando fotografia, música, vídeo e a trajetória profissional.
+
+A aplicação utiliza uma arquitetura baseada em componentes reutilizáveis e separação de responsabilidades.
 
 ---
 
@@ -17,9 +21,17 @@ O projeto está sendo desenvolvido com foco em uma experiência visual elegante,
 - História profissional
 - Capítulos da trajetória musical
 - Destaques da carreira
+- Catálogo de áudios
+- Filtros de áudios por artista
+- Player de áudio customizado
+- Reprodução e pausa de previews
+- Controle de volume
+- Barra de progresso sincronizada com a reprodução
+- Seek para navegação dentro da faixa
+- Exibição de duração e tempo restante
+- Sincronização entre player e card da faixa atual
 - Performances em vídeo
 - Galeria de fotos
-- Áudios
 - Contato
 - Navegação entre páginas com React Router
 - Vídeos do YouTube incorporados
@@ -28,82 +40,32 @@ O projeto está sendo desenvolvido com foco em uma experiência visual elegante,
 
 ---
 
-## 🚀 Tecnologias
+## 🧩 Arquitetura
 
-- React
-- Vite
-- JavaScript (ES6+)
-- HTML5
-- CSS3
-- React Router
-- Git
-- GitHub
-- GitHub Actions
-- GitHub Pages
-- YouTube Embed
+O projeto utiliza uma estrutura baseada em componentes reutilizáveis e separação de responsabilidades.
 
----
+A página de Áudios possui um componente principal responsável pelo gerenciamento dos estados da reprodução, filtros e faixa selecionada.
 
-## 🌐 Projeto publicado
+Componentes como `AudioCard`, `AudioFilters` e `AudioPlayer` recebem dados e callbacks através de props.
 
-O projeto está disponível online:
+O player utiliza a API nativa de áudio do HTML5 para controlar reprodução, pausa, progresso, duração, volume e eventos da faixa.
 
-👉 https://eduardo-martins-tech.github.io/drummer-portfolio/
-
----
-
-## 📌 Status do Projeto
-
-🚧 Em desenvolvimento
-
-### ✅ Concluído
-
-- Estrutura inicial em React + Vite
-- Navbar
-- Navegação com React Router
-- Hero
-- Efeito de escurecimento no scroll
-- Homepage completa
-- Seção de destaques
-- Capítulos da trajetória
-- Área de performances em vídeo
-- Integração com vídeos do YouTube
-- Efeitos de hover nos vídeos
-- Footer
-- Página Performances
-- Navegação entre Home e Performances
-- Deploy no GitHub Pages
-- Deploy automatizado com GitHub Actions
-
----
-
-## 🛣️ Roadmap
-
-### Próximas etapas
-
-- [ ] Página História
-- [ ] Página Áudios
-- [ ] Página Banda
-- [ ] Galeria de fotos
-- [ ] Página Contato
-- [ ] Responsividade completa
-- [ ] SEO
-
----
-
-## ⚙️ Deploy
-
-O projeto utiliza **GitHub Actions** para realizar o build e deploy automaticamente no **GitHub Pages** a cada atualização na branch `main`.
-
-Fluxo:
+Fluxo simplificado:
 
 ```text
-Push na main
-     ↓
-GitHub Actions
-     ↓
-npm install
-     ↓
-npm run build
-     ↓
-GitHub Pages
+Audios
+   │
+   ├── AudioHero
+   │
+   ├── AudioFilters
+   │
+   ├── AudioCard
+   │
+   ├── AudioCard
+   │
+   ├── AudioCard
+   │
+   └── AudioPlayer
+           │
+           ▼
+      HTML5 Audio API
