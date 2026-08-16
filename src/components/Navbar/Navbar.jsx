@@ -14,7 +14,14 @@ function Navbar() {
           História
         </li>
         <li>
-          Áudios
+          <NavLink
+            to="/Audios"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Audios
+          </NavLink>
         </li>
         <li>
           Galeria

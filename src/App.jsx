@@ -3,7 +3,7 @@ import AppRoutes from "./routes";
 
 function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename="/drummer-portfolio">
       <AppRoutes />
     </BrowserRouter>
   );
