@@ -11,22 +11,21 @@ const filters = [
   "OUTROS",
 ];
 
-function AudioFilters() {
+function AudioFilters({ activeFilter, onFilterChange }) {
   return (
-    <section className="audio-filters">
-      <div className="audio-filters-inner">
-        {filters.map((filter, index) => (
-          <button
-            key={filter}
-            className={`audio-filter ${
-              index === 0 ? "active" : ""
-            }`}
-          >
-            {filter}
-          </button>
-        ))}
-      </div>
-    </section>
+    <div className="audio-filters">
+      {filters.map((filter) => (
+        <button
+          key={filter}
+          className={`audio-filter ${
+            activeFilter === filter ? "active" : ""
+          }`}
+          onClick={() => onFilterChange(filter)}
+        >
+          {filter}
+        </button>
+      ))}
+    </div>
   );
 }
 
