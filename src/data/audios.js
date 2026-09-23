@@ -23,6 +23,8 @@ import monicaVaz from "../assets/images/monica-vaz-sobrenatural-2015.png";
 
 import danielJuanLeao from "../assets/images/daniel-juan-leao-2019.png";
 
+import anaBemAssim from "../assets/images/ana-lelia-o-amor-e-bem-assim.png";
+
 import supernovaBrisa from "../assets/images/supernovavida-brisa-2015.png";
 import supernovaDvd from "../assets/images/supernovavida-dvd-aovivo-2010.png";
 import supernovaFavor from "../assets/images/supernovavida-favor-de-deus-2012.png";
@@ -37,7 +39,7 @@ const audios = [
     artist: "DD Junior",
     cover: ddJunior,
     preview: "audio/dd-junior-preview.mp3",
-    spotifyUrl: "",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/4wJ0sJ27jnVqjbssXwtbdh",
   },
 
   {
@@ -46,8 +48,8 @@ const audios = [
     title: "Se Liga na Visão",
     artist: "LEX",
     cover: lexSeLiga,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/lex-se-liga-2012.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/6tEykGCiDO8ATvKMWPXxyu",
   },
 
   {
@@ -56,8 +58,8 @@ const audios = [
     title: "Lex Go",
     artist: "LEX",
     cover: lexGo,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/lex-go.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/4mSoOvkPPbTr6mchI134qP",
   },
 
   {
@@ -66,8 +68,8 @@ const audios = [
     title: "Fora da Caixa",
     artist: "LEX",
     cover: lexForaCaixa,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/lex-fora-da-caixa.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/21cUCP0YT35PLD8GRZ1eil",
   },
 
   {
@@ -76,8 +78,8 @@ const audios = [
     title: "Leão",
     artist: "Daniel Juan Leão",
     cover: danielJuanLeao,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/daniel-juan-leao.mp3",
+    spotifyUrl: "https://open.spotify.com/album/5a69qWBWDlKGEB0t7zQjeO",
   },
 
   {
@@ -86,8 +88,8 @@ const audios = [
     title: "Cabelo Solto",
     artist: "Marcela Taís",
     cover: marcelaCabeloSolto,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/marcela-tais-cabelo-solto.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/0U2tU676AivAxRtDqNkq4s",
   },
 
   {
@@ -96,8 +98,8 @@ const audios = [
     title: "Moderno à Moda Antiga",
     artist: "Marcela Taís",
     cover: marcelaModerno,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/marcela-tais-antiga.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/2PjxURTuRZROH89Spoi1qr",
   },
 
   {
@@ -106,8 +108,8 @@ const audios = [
     title: "O Seu Amor é Tudo",
     artist: "Nádia Santolli",
     cover: nadiaSantolli,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/nadia-santoli.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/2hVwUeVy69PRcROPu65bhN",
   },
 
   {
@@ -116,8 +118,18 @@ const audios = [
     title: "Uma Nova Luz",
     artist: "Aline Silva",
     cover: alineSilva,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/aline-silva.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/2Sj5CXUzirFkJBW9AoPdjJ",
+  },
+
+  {
+  id: "ana-lelia-o-amor-e-bem-assim",
+  year: 2019,
+  title: "O Amor é Bem Assim",
+  artist: "Ana Lélia",
+  cover: anaBemAssim,
+  preview: "audio/ana-lelia.mp3",
+  spotifyUrl: "https://open.spotify.com/intl-pt/album/0nP0RkGOemGEO2XUQaHzqr",
   },
 
   {
@@ -126,8 +138,8 @@ const audios = [
     title: "Entra no Meu Lar",
     artist: "Bispo Rodovalho",
     cover: bispoEntra,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/bispo-rodovalho-entra-no-meu-lar.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/2FKXkvtOnpCdTv8GXmnH0q",
   },
 
   {
@@ -136,8 +148,8 @@ const audios = [
     title: "Seguindo em Frente",
     artist: "Bispo Rodovalho",
     cover: bispoSeguindo,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/bispo-rodovalho-louvorzao-sertanejo.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/5ZIC4sjsUrP18VHmNGBd9x",
   },
 
   {
@@ -146,8 +158,8 @@ const audios = [
     title: "Faz o Meu Milagre",
     artist: "Bispo Rodovalho",
     cover: bispoMilagre,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/bispo-rodovalho-faz-o-meu-milagre.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/0ZHRiko5ydIVAvfg06K83Y",
   },
 
   {
@@ -156,8 +168,8 @@ const audios = [
     title: "Alegria Verdadeira",
     artist: "Bispo Rodovalho",
     cover: bispoAlegria,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/bispo-rodovalho-alegria-verdadeira.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/0ResJFJU0em1dDB7tOIHDp",
   },
 
   {
@@ -166,8 +178,8 @@ const audios = [
     title: "Sara Nossa Terra — Por Favor",
     artist: "Bispo Rodovalho",
     cover: bispoSara,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/bispo-rodovalho-sara-nossa-terra.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/5ci7dIdnUh1QnJtfgEAuk6",
   },
 
   {
@@ -176,8 +188,8 @@ const audios = [
     title: "Além do Véu",
     artist: "Hélio Borges",
     cover: helioAlem,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/helio-borges-alem-do-veu.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/0eV7TrY7RpoYbEF4aA11Mi",
   },
 
   {
@@ -186,8 +198,8 @@ const audios = [
     title: "Vem com Tua Glória",
     artist: "Hélio Borges",
     cover: helioGloria,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/helio-borges-vem-com-tua-gloria.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/6n0qUkQQwvgHU5TRaq5uzA",
   },
 
   {
@@ -196,8 +208,8 @@ const audios = [
     title: "Sobrenatural",
     artist: "Mônica Vaz",
     cover: monicaVaz,
-    preview: null,
-    spotifyUrl: "",
+    preview: "audio/monica-vaz-2015.mp3",
+    spotifyUrl: "https://open.spotify.com/intl-pt/album/6bhkSIR5ec1HmDm90VKuS6",
   },
 
   {
@@ -206,7 +218,7 @@ const audios = [
     title: "Força das Águas",
     artist: "Supernovavida",
     cover: supernovaForca,
-    preview: null,
+    preview: "audio/supernovavida-forca-das-aguas.mp3",
     spotifyUrl: "",
   },
 
@@ -216,7 +228,7 @@ const audios = [
     title: "DVD ao Vivo",
     artist: "Supernovavida",
     cover: supernovaDvd,
-    preview: null,
+    preview: "audio/supernovavida-ao-vivo.mp3",
     spotifyUrl: "",
   },
 
@@ -226,7 +238,7 @@ const audios = [
     title: "Favor de Deus",
     artist: "Supernovavida",
     cover: supernovaFavor,
-    preview: null,
+    preview: "audio/supernovavida-favor-de-deus.mp3",
     spotifyUrl: "",
   },
 
@@ -236,7 +248,7 @@ const audios = [
     title: "Brisa",
     artist: "Supernovavida",
     cover: supernovaBrisa,
-    preview: null,
+    preview: "audio/supernovavida-brisa.mp3",
     spotifyUrl: "",
   },
 
@@ -246,9 +258,12 @@ const audios = [
     title: "Não Para Não",
     artist: "Supernovavida",
     cover: supernovaNaoPara,
-    preview: null,
+    preview: "audio/supernovavida-nao-para-nao.mp3",
     spotifyUrl: "",
   },
+
+  
+
 ];
 
 export default audios;
