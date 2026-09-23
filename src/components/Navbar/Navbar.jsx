@@ -36,9 +36,7 @@ function Navbar() {
             Performances
           </NavLink>
         </li>
-        <li>
-          Banda
-        </li>
+        
       </ul>
     </nav>
   );

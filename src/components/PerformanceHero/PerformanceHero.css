@@ -1,5 +1,6 @@
 .performance-hero {
   height: 75vh;
+
   background-image: url("../../assets/images/setup.png");
   background-size: cover;
   background-position: center 25%;
@@ -10,32 +11,68 @@
 
 .performance-hero::after {
   content: "";
+
   position: absolute;
   inset: 0;
 
-  background: rgba(0, 0, 0, var(--hero-darkness, 0));
+  background: rgba(
+    0,
+    0,
+    0,
+    var(--hero-darkness, 0)
+  );
 
   pointer-events: none;
-
   z-index: 1;
 }
 
 .performance-hero-content {
   position: absolute;
-  top: 23%;
-  left: 25px;
-  transform: translateY(-70%);
+
+  top: 32%;
+  left: 60px;
 
   z-index: 2;
 }
 
-.performance-hero h1 {
-  margin: 0;
-  color: #ffffff;
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+.performance-hero-label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: #4D63C7;
+;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+
+  font-family: inherit;
 }
 
+.performance-hero h1 {
+  margin: 0;
 
+  color:   #ffffff;
+;
 
+  font-size: clamp(2.5rem, 3.5vw, 3.6rem);
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+
+  font-family: inherit;
+}
+
+.performance-hero p {
+  margin-top: 10px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+
+  max-width: 480px;
+
+  font-family: inherit;
+}

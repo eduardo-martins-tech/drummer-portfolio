@@ -25,7 +25,21 @@ function PerformanceHero() {
         "--hero-darkness": heroDarkness,
       }}
     >
-      <div className="performance-hero-content"></div>
+      <div className="performance-hero-content">
+
+        <span className="performance-hero-label">
+          ▣ VÍDEOS
+        </span>
+
+        <h1>
+          SHOWS&CLIPS
+        </h1>
+
+        <p>
+          Assista a performances, clipes e registros ao vivo.
+        </p>
+
+      </div>
     </section>
   );
 }
