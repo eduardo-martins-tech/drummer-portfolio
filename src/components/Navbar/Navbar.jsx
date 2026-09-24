@@ -24,7 +24,14 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          Galeria
+          <NavLink
+            to="/galeria"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Galeria
+          </NavLink>
         </li>
         <li>
           <NavLink
@@ -36,7 +43,7 @@ function Navbar() {
             Performances
           </NavLink>
         </li>
-        
+
       </ul>
     </nav>
   );
