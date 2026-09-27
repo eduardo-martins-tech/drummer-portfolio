@@ -16,9 +16,13 @@ function Audios() {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [activeFilter, setActiveFilter] = useState("TODOS");
+  const [playRequestId, setPlayRequestId] = useState(0);
 
   function handlePlayAudio(audio) {
     setCurrentAudio(audio);
+    // Cada clique gera um novo "pedido de play", mesmo que seja
+    // a mesma faixa já carregada, para o player saber que deve tocar.
+    setPlayRequestId((id) => id + 1);
   }
 
   const mainArtists = [
@@ -80,6 +84,7 @@ function Audios() {
       <AudioPlayer
         key={currentAudio.id}
         audio={currentAudio}
+        playRequestId={playRequestId}
         onTimeUpdate={setCurrentTime}
         onDurationChange={setDuration}
       />

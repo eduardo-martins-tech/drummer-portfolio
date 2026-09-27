@@ -5,8 +5,10 @@ function AudioPlayer({
   audio,
   onTimeUpdate,
   onDurationChange,
+  playRequestId,
 }) {
   const audioRef = useRef(null);
+  const previousVolumeRef = useRef(1);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -99,6 +101,35 @@ audioElement.addEventListener(
     };
     }, [onTimeUpdate, onDurationChange]);
 
+  // Toca automaticamente quando o usuário clica em "OUVIR TRECHO"
+  // em algum card (mesmo que seja a faixa já carregada no player)
+  useEffect(() => {
+    const audioElement = audioRef.current;
+
+    if (!audioElement || !audioSrc || !playRequestId) return;
+
+    const startPlayback = () => {
+      audioElement
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch(() => {
+          // O navegador pode bloquear o autoplay em alguns casos;
+          // nesse caso o usuário ainda pode dar play manualmente.
+        });
+    };
+
+    if (audioElement.readyState >= 2) {
+      startPlayback();
+    } else {
+      audioElement.addEventListener("canplay", startPlayback, {
+        once: true,
+      });
+
+      return () =>
+        audioElement.removeEventListener("canplay", startPlayback);
+    }
+  }, [playRequestId, audioSrc]);
+
   // Play / Pause
   const handlePlayPause = () => {
     const audioElement = audioRef.current;
@@ -114,50 +145,127 @@ audioElement.addEventListener(
     }
   };
 
-  // Seek
-  const handleSeek = (event) => {
+  // Avança ou volta 10 segundos na faixa atual
+  const handleSkip = (seconds) => {
     const audioElement = audioRef.current;
 
-    if (!audioElement || !duration) return;
+    if (!audioElement || !audioSrc) return;
 
-    const rect =
-      event.currentTarget.getBoundingClientRect();
+    // Usa a duração real do elemento de áudio (não o estado do React),
+    // que pode ainda estar zerado logo após trocar de faixa.
+    const audioDuration = audioElement.duration;
+    const maxTime = Number.isFinite(audioDuration)
+      ? audioDuration
+      : Infinity;
 
-    const clickPosition =
-      event.clientX - rect.left;
+    const newTime = Math.min(
+      Math.max(audioElement.currentTime + seconds, 0),
+      maxTime
+    );
 
-    const percentage =
-      clickPosition / rect.width;
-
-    audioElement.currentTime =
-      percentage * duration;
-
-    setCurrentTime(audioElement.currentTime);
+    audioElement.currentTime = newTime;
+    setCurrentTime(newTime);
+    onTimeUpdate?.(newTime);
   };
 
-  // Volume
-  const handleVolume = (event) => {
+  // Seek (clique e também arrastar, com mouse ou touch)
+  const seekFromEvent = (event) => {
     const audioElement = audioRef.current;
 
     if (!audioElement) return;
 
-    const rect =
-      event.currentTarget.getBoundingClientRect();
+    const audioDuration = audioElement.duration;
 
-    const clickPosition =
-      event.clientX - rect.left;
+    if (!Number.isFinite(audioDuration) || audioDuration === 0) return;
+
+    const rect = event.currentTarget.getBoundingClientRect();
+
+    const clickPosition = event.clientX - rect.left;
+
+    const percentage = Math.min(
+      Math.max(clickPosition / rect.width, 0),
+      1
+    );
+
+    const newTime = percentage * audioDuration;
+
+    audioElement.currentTime = newTime;
+    setCurrentTime(newTime);
+    onTimeUpdate?.(newTime);
+  };
+
+  const handleSeekStart = (event) => {
+    event.currentTarget.setPointerCapture(event.pointerId);
+    seekFromEvent(event);
+  };
+
+  const handleSeekMove = (event) => {
+    // Só arrasta enquanto o botão/dedo estiver pressionado
+    if (event.buttons === 0 && event.pointerType !== "touch") return;
+
+    seekFromEvent(event);
+  };
+
+  const handleSeekEnd = (event) => {
+    if (event.currentTarget.hasPointerCapture?.(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+  };
+
+  // Volume (clique e também arrastar)
+  const volumeFromEvent = (event) => {
+    const audioElement = audioRef.current;
+
+    if (!audioElement) return;
+
+    const rect = event.currentTarget.getBoundingClientRect();
+
+    const clickPosition = event.clientX - rect.left;
 
     const newVolume = Math.min(
-      Math.max(
-        clickPosition / rect.width,
-        0
-      ),
+      Math.max(clickPosition / rect.width, 0),
       1
     );
 
     audioElement.volume = newVolume;
 
     setVolume(newVolume);
+  };
+
+  const handleVolumeStart = (event) => {
+    event.currentTarget.setPointerCapture(event.pointerId);
+    volumeFromEvent(event);
+  };
+
+  const handleVolumeMove = (event) => {
+    if (event.buttons === 0 && event.pointerType !== "touch") return;
+
+    volumeFromEvent(event);
+  };
+
+  const handleVolumeEnd = (event) => {
+    if (event.currentTarget.hasPointerCapture?.(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+  };
+
+  // Mudo (clicando no ícone do alto-falante)
+  const handleToggleMute = () => {
+    const audioElement = audioRef.current;
+
+    if (!audioElement) return;
+
+    if (volume > 0) {
+      // Guarda o volume atual pra restaurar depois e zera o som
+      previousVolumeRef.current = volume;
+      audioElement.volume = 0;
+      setVolume(0);
+    } else {
+      const restoredVolume = previousVolumeRef.current || 1;
+
+      audioElement.volume = restoredVolume;
+      setVolume(restoredVolume);
+    }
   };
 
   // Formata segundos para MM:SS
@@ -216,8 +324,16 @@ audioElement.addEventListener(
           ⤨
         </button>
 
-        <button aria-label="Anterior">
-          |◀
+        <button
+          className="audio-player-skip"
+          aria-label="Voltar 10 segundos"
+          title="Voltar 10s"
+          onClick={() => handleSkip(-10)}
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <polygon points="11 6 3 12 11 18" fill="currentColor" />
+            <polygon points="21 6 13 12 21 18" fill="currentColor" />
+          </svg>
         </button>
 
         <button
@@ -232,14 +348,19 @@ audioElement.addEventListener(
           {isPlaying ? "Ⅱ" : "▶"}
         </button>
 
-        <button aria-label="Próxima">
-          ▶|
+        <button
+          className="audio-player-skip"
+          aria-label="Avançar 10 segundos"
+          title="Avançar 10s"
+          onClick={() => handleSkip(10)}
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <polygon points="13 6 21 12 13 18" fill="currentColor" />
+            <polygon points="3 6 11 12 3 18" fill="currentColor" />
+          </svg>
         </button>
 
-        <button aria-label="Repetir">
-          ↻
-        </button>
-
+        
       </div>
 
       {/* PROGRESSO */}
@@ -252,7 +373,10 @@ audioElement.addEventListener(
 
         <div
           className="audio-player-progress-bar"
-          onClick={handleSeek}
+          onPointerDown={handleSeekStart}
+          onPointerMove={handleSeekMove}
+          onPointerUp={handleSeekEnd}
+          onPointerCancel={handleSeekEnd}
         >
           <span
             style={{
@@ -271,11 +395,58 @@ audioElement.addEventListener(
 
       <div className="audio-player-volume">
 
-        <span>🔊</span>
+        <button
+          type="button"
+          className="audio-player-mute"
+          aria-label={volume === 0 ? "Ativar som" : "Mudo"}
+          title={volume === 0 ? "Ativar som" : "Mudo"}
+          onClick={handleToggleMute}
+        >
+          {volume === 0 ? (
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polygon
+                points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+                fill="currentColor"
+                stroke="none"
+              />
+              <line x1="23" y1="9" x2="17" y2="15" />
+              <line x1="17" y1="9" x2="23" y2="15" />
+            </svg>
+          ) : (
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polygon
+                points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+                fill="currentColor"
+                stroke="none"
+              />
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+            </svg>
+          )}
+        </button>
 
         <div
           className="audio-player-volume-bar"
-          onClick={handleVolume}
+          onPointerDown={handleVolumeStart}
+          onPointerMove={handleVolumeMove}
+          onPointerUp={handleVolumeEnd}
+          onPointerCancel={handleVolumeEnd}
         >
           <span
             style={{
