@@ -10,8 +10,15 @@ function Navbar() {
         <li>
           <Link to="/">Início</Link>
         </li>
-        <li>
-          História
+         <li>
+          <NavLink
+            to="/Bio"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Bio
+          </NavLink>
         </li>
         <li>
           <NavLink
