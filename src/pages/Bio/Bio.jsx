@@ -88,7 +88,7 @@ function Bio() {
                             <div className="bio-story-image">
 
                                 <img
-                                    src={fotoBioMeio}
+                                    src={fotoBioPretoBranco}
                                     alt="Eduardo Martins em registro de sua trajetória musical"
                                 />
 

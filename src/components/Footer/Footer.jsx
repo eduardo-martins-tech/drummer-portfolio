@@ -28,19 +28,47 @@ function Footer() {
 
         <div className="footer-socials">
 
-          <a href="#">
+          {/* INSTAGRAM */}
+          <a
+            href="https://www.instagram.com/eduardomartinsdf290"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            title="Instagram"
+          >
             <FaInstagram />
           </a>
 
-          <a href="#">
+          {/* FACEBOOK */}
+          <a
+            href="https://www.facebook.com/dududrumer"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            title="Facebook"
+          >
             <FaFacebookF />
           </a>
 
-          <a href="#">
+          {/* E-MAIL */}
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=dudu.supernovavida@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Enviar e-mail"
+            title="Enviar e-mail"
+          >
             <MdEmail />
           </a>
 
-          <a href="#">
+          {/* WHATSAPP */}
+          <a
+            href="https://wa.me/5561998161540"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            title="WhatsApp"
+          >
             <FaWhatsapp />
           </a>
 
