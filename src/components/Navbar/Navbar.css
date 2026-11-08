@@ -70,3 +70,22 @@ nav li:hover::after {
 nav li:has(.nav-link.active) {
   color: #566FCF;
 }
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 600px) {
+  nav {
+    justify-content: center;
+    padding: 12px 10px;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+
+  nav li {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
