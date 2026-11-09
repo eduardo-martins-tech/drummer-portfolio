@@ -161,3 +161,39 @@
     }
 
 }
+
+/* =========================
+   RESPONSIVIDADE TABLET
+   601px até 900px
+========================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .hero-title {
+        left: 45px;
+        right: 25px;
+        top: 28%;
+        text-align: left;
+    }
+
+    .hero-title h2 {
+        font-size: clamp(2.5rem, 6vw, 3.4rem);
+        line-height: 1;
+        word-spacing: 3px;
+    }
+
+    .hero-subtitle {
+        left: 45px;
+        right: 25px;
+        top: 42%;
+        width: auto;
+        max-width: 400px;
+        text-align: left;
+    }
+
+    .hero-subtitle p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+}

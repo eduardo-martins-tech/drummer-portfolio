@@ -44,10 +44,43 @@
 
 }
 
+/* =========================
+   HERO BACKGROUND TEXT - TABLET
+========================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .hero-background-text {
+        bottom: -80px;
+        height: 150px;
+    }
+
+    .hero-background-text h2 {
+        font-size: clamp(2rem, 5.5vw, 3.2rem);
+        letter-spacing: 1px;
+    }
+
+}
+
 
 /* =========================
    HERO BACKGROUND TEXT - MOBILE
 ========================= */
+
+
+@keyframes heroPhraseMobile {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
 
 @media (max-width: 600px) {
 
@@ -60,7 +93,7 @@
   }
 
   .hero-background-text h2 {
-    font-size: 1.65rem;
+    font-size: 1.4rem;
     letter-spacing: 0.04em;
     white-space: nowrap;
     text-align: center;
