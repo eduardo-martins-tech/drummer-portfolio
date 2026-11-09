@@ -6,7 +6,11 @@ function Videos() {
     <section className="videos-section">
 
       <div className="videos-link-wrapper">
-        <Link to="/performances" className="videos-link">
+        <Link
+          to="/performances"
+          className="videos-link"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           Explore mais performances →
         </Link>
       </div>

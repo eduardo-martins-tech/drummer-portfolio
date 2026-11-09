@@ -436,13 +436,43 @@
 
 @media (max-width: 600px) {
 
+  /* HERO MOBILE */
   .galeria-hero {
-    height: 280px;
+    height: 300px;
   }
 
+  .galeria-hero-image img {
+    object-position: 65% center;
+  }
+
+  .galeria-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(5, 10, 18, 0.85) 0%,
+      rgba(5, 10, 18, 0.55) 55%,
+      rgba(5, 10, 18, 0.20) 100%
+    );
+  }
+
+  /* POSICIONAMENTO DO TEXTO */
   .galeria-hero-content {
-    left: 30px;
-    right: 30px;
+    top: 32%;
+    left: 25px;
+    right: 25px;
+    transform: translateY(-50%);
+  }
+
+  .galeria-hero h1 {
+    font-size: clamp(2.2rem, 9vw, 2.8rem);
+    line-height: 1;
+    letter-spacing: 0.035em;
+  }
+
+  .galeria-hero p {
+    margin-top: 5px;
+    max-width: 290px;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .galeria-grid {

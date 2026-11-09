@@ -74,3 +74,41 @@
   line-height: 1.6;
   max-width: 480px;
 }
+
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 600px) {
+  .audio-hero {
+    height: 320px;
+  }
+
+  .audio-hero-image {
+    width: 100%;
+  }
+
+  .audio-hero-image img {
+    object-position: 65% center;
+  }
+
+  .audio-hero-content {
+    width: calc(100% - 50px);
+    margin-left: 25px;
+    transform: translateY(-50px);
+  }
+
+  .audio-hero-label {
+    margin-bottom: 9px;
+  }
+
+  .audio-hero h1 {
+    font-size: clamp(2.1rem, 9vw, 2.5rem);
+    line-height: 1;
+  }
+
+  .audio-hero p {
+    margin-top: 4px;
+    max-width: 300px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}

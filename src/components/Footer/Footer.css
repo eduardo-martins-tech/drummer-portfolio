@@ -45,7 +45,7 @@
 
     bottom: 0;
 
-    width:730px;
+    width: 730px;
 
     pointer-events: none;
 
@@ -114,7 +114,7 @@
 
 
 .footer-button {
-    
+
 
     background: transparent;
 
@@ -167,4 +167,58 @@
 
     font-size: .9rem;
 
+}
+
+
+/* TABLETS */
+@media (max-width: 900px) {
+    .footer-image {
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-image img {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .footer {
+        min-height: 560px;
+        padding: 45px 20px 35px;
+    }
+
+    .footer-divider {
+        margin-bottom: 55px;
+    }
+
+    .footer-image {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-image img {
+        width: 100%;
+        max-width: 420px;
+        opacity: 0.12;
+    }
+
+    .footer-content h2 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        margin-bottom: 35px;
+    }
+
+    .footer-socials {
+        gap: 25px;
+    }
+
+    .footer-copy {
+        margin-top: 45px;
+    }
 }
