@@ -217,6 +217,10 @@
 
     transition:.3s ease;
 
+    /* empurra o vídeo para o fim do card: os dois vídeos ficam
+       alinhados mesmo quando as descrições têm tamanhos diferentes */
+    margin-top: auto;
+
 }
 
 .video-frame:hover{
@@ -242,7 +246,7 @@
         width: 100%;
         max-width: 100%;
         grid-template-columns: 1fr;
-        gap: 55px;
+        gap: 80px;
     }
 
     .video-item {
@@ -251,7 +255,7 @@
 
     .video-title {
         font-size: .95rem;
-        margin-bottom: 14px;
+        margin-bottom: 22px;
     }
 
     .video-description {
@@ -260,7 +264,7 @@
         min-height: 0;
         font-size: 1rem;
         line-height: 1.7;
-        margin-bottom: 22px;
+        margin-bottom: 30px;
     }
 
     .video-frame {
