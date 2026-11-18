@@ -45,6 +45,18 @@
 }
 
 /* =========================
+   HERO BACKGROUND TEXT - TABLET DEITADO / NOTEBOOK PEQUENO
+========================= */
+
+@media (min-width: 901px) and (max-width: 1280px) {
+
+    .hero-background-text h2 {
+        font-size: clamp(3rem, 6vw, 5rem);
+    }
+
+}
+
+/* =========================
    HERO BACKGROUND TEXT - TABLET
 ========================= */
 
