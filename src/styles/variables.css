@@ -1,0 +1,14 @@
+/* =========================
+   VARIÁVEIS GLOBAIS
+   Cores e fontes usadas no site inteiro.
+   Para mudar o azul de destaque ou as fontes, basta alterar aqui.
+========================= */
+
+:root {
+  /* Fontes (carregadas no index.html pelo Google Fonts) */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  /* Cores */
+  --color-accent: #4d63c7;
+}

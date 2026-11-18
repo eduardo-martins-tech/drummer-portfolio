@@ -36,6 +36,7 @@ function Videos() {
               title="Debaixo do Meu Pé"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
             />
           </div>
 
@@ -60,6 +61,7 @@ function Videos() {
               title="Não Para Não"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
             />
           </div>
 

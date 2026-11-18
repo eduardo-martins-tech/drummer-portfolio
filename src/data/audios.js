@@ -26,9 +26,9 @@ import danielJuanLeao from "../assets/images/daniel-juan-leao-2019.png";
 import anaBemAssim from "../assets/images/ana-lelia-o-amor-e-bem-assim.png";
 
 import supernovaBrisa from "../assets/images/supernovavida-brisa-2015.png";
-import supernovaDvd from "../assets/images/supernovavida-dvd-aovivo-2010.png";
-import supernovaFavor from "../assets/images/supernovavida-favor-de-deus-2012.png";
-import supernovaForca from "../assets/images/supernovavida-forca-das-aguas-2002.png";
+import supernovaDvd from "../assets/images/supernovavida-dvd-aovivo-2010.jpg";
+import supernovaFavor from "../assets/images/supernovavida-favor-de-deus-2012.jpg";
+import supernovaForca from "../assets/images/supernovavida-forca-das-aguas-2002.jpg";
 import supernovaNaoPara from "../assets/images/supernovavida-nao-para-nao-2015.png";
 
 const audios = [

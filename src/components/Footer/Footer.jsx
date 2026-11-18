@@ -1,5 +1,5 @@
 import "./Footer.css";
-import drummer from "../../assets/images/footer-drums.png";
+import drummer from "../../assets/images/footer-drums.webp";
 
 import {
   FaInstagram,
@@ -19,6 +19,8 @@ function Footer() {
         <img
           src={drummer}
           alt="Eduardo Martins"
+          loading="lazy"
+          decoding="async"
         />
       </div>
 

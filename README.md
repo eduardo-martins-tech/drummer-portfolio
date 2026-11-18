@@ -2,7 +2,7 @@
 
 Portfólio desenvolvido para apresentar a trajetória do baterista **Eduardo Martins**, reunindo mais de 20 anos de carreira em uma experiência visual moderna, responsiva e de fácil navegação.
 
-O projeto também funciona como uma aplicação prática de desenvolvimento front-end, explorando **React, componentização, gerenciamento de estado e interação com APIs nativas do navegador**.
+O projeto nasceu de uma necessidade real: o material da carreira estava espalhado entre vídeos no YouTube, álbuns no Spotify e fotos em diferentes redes. O site centraliza essa história em um só lugar e, ao mesmo tempo, serviu como estudo prático de **React, componentização, gerenciamento de estado e APIs nativas do navegador**.
 
 ---
 
@@ -12,53 +12,48 @@ O projeto também funciona como uma aplicação prática de desenvolvimento fron
 
 ---
 
-## 📖 Sobre o projeto
-
-O Drummer Portfolio foi criado para centralizar momentos importantes da trajetória musical de Eduardo Martins, incluindo artistas, bandas, gravações em estúdio, apresentações ao vivo, vídeos e registros musicais.
-
-A aplicação foi desenvolvida com foco em uma experiência visual elegante, valorizando fotografia, música, vídeo e a narrativa da trajetória profissional.
-
----
-
 ## ✨ Funcionalidades
 
-- História e destaques da trajetória musical
-- Performances em vídeo
-- Integração com vídeos do YouTube
-- Catálogo de áudios
-- Filtros de músicas por artista
-- Player de áudio customizado
-- Reprodução e pausa de previews
-- Controle de volume
-- Barra de progresso e seek
-- Exibição de duração e tempo restante
-- Sincronização entre player e faixa selecionada
-- Navegação entre páginas com React Router
-- Efeitos de interação e scroll
-- Deploy automatizado
+- **Início:** apresentação, capítulos com destaques da carreira e vídeos em destaque
+- **Bio:** história completa da trajetória musical
+- **Áudios / Discografia:** catálogo com 23 álbuns gravados, filtros por artista e links para o Spotify
+- **Galeria:** registros de shows, bastidores e gravações, com visualização ampliada e navegação por teclado
+- **Performances:** shows e clipes integrados ao YouTube
+- **Contato:** links diretos para WhatsApp, e-mail, Instagram e Facebook no rodapé
+- Layout responsivo para celular, tablet e desktop
+- Pré-visualização personalizada ao compartilhar o link (Open Graph)
 
 ---
 
-## 🎵 Sistema de Áudio
+## 🎵 Player de áudio
 
-A página de Discografia possui um player customizado desenvolvido com **React e HTML5 Audio API**.
+A página de Discografia possui um player próprio, desenvolvido com **React e a HTML5 Audio API**, sem bibliotecas externas.
 
-O sistema utiliza gerenciamento de estado para controlar:
+- Reprodução e pausa dos trechos
+- Avançar e voltar 10 segundos
+- Barra de progresso com seek por clique ou arraste (mouse e toque)
+- Controle de volume e mudo
+- Tempo atual e tempo restante
+- Sincronização entre o player e o card da faixa selecionada
 
-- Faixa selecionada
-- Tempo atual da reprodução
-- Duração da música
-- Filtros por artista
-
-A comunicação entre os componentes acontece através de **props e callbacks**, mantendo o gerenciamento principal centralizado na página de Áudios.
+O estado principal (faixa atual, tempo, duração e filtro ativo) fica centralizado na página de Áudios, e a comunicação entre os componentes acontece por **props e callbacks**.
 
 ---
 
 ## 🧩 Arquitetura
 
-O projeto utiliza uma estrutura baseada em **componentes reutilizáveis e separação de responsabilidades**.
+Estrutura baseada em **componentes reutilizáveis e separação de responsabilidades**: cada componente tem sua própria pasta com JSX e CSS, os dados ficam separados em `src/data` e as cores e fontes são centralizadas em variáveis CSS.
 
-Exemplo da estrutura da página de Áudios:
+```text
+src
+├── components/     # Navbar, Hero, AudioPlayer, AudioCard, Footer...
+├── pages/          # Home, Bio, Audios, Galeria, Performances
+├── data/           # catálogo de áudios e performances
+├── styles/         # reset, variáveis, tipografia e estilos globais
+└── assets/         # imagens otimizadas
+```
+
+Exemplo da página de Áudios:
 
 ```text
 Audios
@@ -76,62 +71,44 @@ Audios
 
 ---
 
+## ⚡ Desempenho e acessibilidade
+
+- Imagens comprimidas (de ~44 MB para ~5 MB no total)
+- Carregamento sob demanda (`loading="lazy"`) em imagens e vídeos fora da tela inicial
+- Textos alternativos em todas as imagens e `aria-label` nos controles do player
+- Um título principal (`h1`) por página
+- Foco visível para navegação por teclado
+
+---
+
 ## 🚀 Tecnologias
 
 - React
 - Vite
 - JavaScript (ES6+)
-- HTML5
-- CSS3
+- HTML5 e CSS3
 - React Router
 - HTML5 Audio API
-- Git
-- GitHub
+- Git e GitHub
 - GitHub Actions
 - GitHub Pages
 - YouTube Embed
 
 ---
 
-## 📌 Status do Projeto
+## 📌 Status do projeto
 
-🚧 **Em desenvolvimento**
+✅ **Versão 1.0 publicada**
 
-### ✅ Concluído
+### 🛣️ Próximos passos
 
-- Estrutura inicial em React + Vite
-- Organização baseada em componentes
-- Navbar e navegação com React Router
-- Homepage completa
-- Seção de destaques e capítulos da trajetória
-- Página de Performances
-- Integração com vídeos do YouTube
-- Página de Áudios / Discografia
-- Sistema de filtros por artista
-- Player de áudio customizado
-- Barra de progresso sincronizada
-- Controle de volume
-- Footer
-- Deploy no GitHub Pages
-- Deploy automatizado com GitHub Actions
-
----
-
-## 🛣️ Roadmap
-
-- [ ] Página História
-- [ ] Página Banda
-- [ ] Galeria de fotos
-- [ ] Página Contato
-- [ ] Finalizar previews das faixas
-- [ ] Responsividade completa
-- [ ] SEO
+- [ ] SEO (sitemap e metadados por página)
 
 ---
 
 ## ⚙️ Deploy
 
-O projeto utiliza **GitHub Actions** para realizar automaticamente o build e deploy no **GitHub Pages** a cada atualização enviada para a branch `main`.
+O projeto usa **GitHub Actions** para gerar o build e publicar automaticamente no **GitHub Pages** a cada atualização na branch `main`.
 
 ```text
 Push na main
@@ -143,4 +120,17 @@ npm install
 npm run build
      ↓
 GitHub Pages
+```
+
+Como o site é uma SPA com React Router, o workflow copia o `index.html` para `404.html` depois do build. Assim, links diretos para páginas internas (como `/audios`) funcionam normalmente.
+
+---
+
+## 💻 Rodando localmente
+
+```bash
+git clone https://github.com/eduardo-martins-tech/drummer-portfolio.git
+cd drummer-portfolio
+npm install
+npm run dev
 ```

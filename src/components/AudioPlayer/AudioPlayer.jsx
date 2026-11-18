@@ -194,8 +194,18 @@ audioElement.addEventListener(
     onTimeUpdate?.(newTime);
   };
 
+  // Mantém o arraste "preso" à barra mesmo se o dedo/mouse sair dela.
+  // Se o navegador não permitir, o seek continua funcionando normalmente.
+  const capturePointer = (event) => {
+    try {
+      event.currentTarget.setPointerCapture(event.pointerId);
+    } catch {
+      // sem captura: segue sem interromper o seek
+    }
+  };
+
   const handleSeekStart = (event) => {
-    event.currentTarget.setPointerCapture(event.pointerId);
+    capturePointer(event);
     seekFromEvent(event);
   };
 
@@ -233,7 +243,7 @@ audioElement.addEventListener(
   };
 
   const handleVolumeStart = (event) => {
-    event.currentTarget.setPointerCapture(event.pointerId);
+    capturePointer(event);
     volumeFromEvent(event);
   };
 
@@ -320,11 +330,8 @@ audioElement.addEventListener(
 
       <div className="audio-player-controls">
 
-        <button aria-label="Aleatório">
-          ⤨
-        </button>
-
         <button
+          type="button"
           className="audio-player-skip"
           aria-label="Voltar 10 segundos"
           title="Voltar 10s"
@@ -337,6 +344,7 @@ audioElement.addEventListener(
         </button>
 
         <button
+          type="button"
           className="audio-player-play"
           aria-label={
             isPlaying
@@ -349,6 +357,7 @@ audioElement.addEventListener(
         </button>
 
         <button
+          type="button"
           className="audio-player-skip"
           aria-label="Avançar 10 segundos"
           title="Avançar 10s"
@@ -456,13 +465,6 @@ audioElement.addEventListener(
         </div>
 
       </div>
-
-      <button
-        className="audio-player-menu"
-        aria-label="Playlist"
-      >
-        ☰
-      </button>
 
     </div>
   );

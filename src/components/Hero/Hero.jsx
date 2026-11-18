@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Hero.css";
 
-import heroImage from "../../assets/images/hero.png";
+import heroImage from "../../assets/images/hero.jpg";
 import HeroBackgroundText from "../HeroBackgroundText/HeroBackgroundText";
 
 function Hero() {
@@ -35,10 +35,10 @@ function Hero() {
       />
 
       <div className="hero-title">
-        <h2>
+        <h1>
           <span className="blue">Eduardo</span>{" "}
           <span className="white">Martins</span>
-        </h2>
+        </h1>
       </div>
 
       <div className="hero-subtitle">

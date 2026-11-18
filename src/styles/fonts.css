@@ -1,0 +1,20 @@
+/* =========================
+   TIPOGRAFIA
+   Inter: textos, menus e títulos
+   Playfair Display: nome em destaque na página inicial
+========================= */
+
+body {
+  font-family: var(--font-body);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Botões e campos não herdam a fonte por padrão no navegador */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}

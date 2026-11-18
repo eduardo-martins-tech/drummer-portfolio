@@ -90,6 +90,8 @@ function Bio() {
                                 <img
                                     src={fotoBioPretoBranco}
                                     alt="Eduardo Martins em registro de sua trajetória musical"
+                                    loading="lazy"
+                                    decoding="async"
                                 />
 
                             </div>

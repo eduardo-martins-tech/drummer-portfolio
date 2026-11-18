@@ -44,7 +44,8 @@
   .audios-grid {
     grid-template-columns: 1fr;
 
-    padding: 10px 16px 100px;
+    /* espaço para o player fixo, que no celular tem duas linhas */
+    padding: 10px 16px 140px;
   }
 
   .audios-filters {

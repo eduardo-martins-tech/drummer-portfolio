@@ -13,7 +13,7 @@
 
 .performance-chapter h2 {
   margin: 0;
-  color: #4D63C7;
+  color: var(--color-accent);
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -27,7 +27,7 @@
   width: 70px;
   height: 3px;
   margin-top: 4px;
-  background: #4D63C7;
+  background: var(--color-accent);
 }
 
 .performance-videos {
@@ -47,7 +47,7 @@
 .performance-video h3 {
   margin: 0 0 6px;
   min-height: 48px;
-  color: #4D63C7;
+  color: var(--color-accent);
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.08em;

@@ -54,7 +54,7 @@
 .galeria-hero h1 {
   margin: 0;
 
-  color: #4d63c7;
+  color: var(--color-accent);
 
   font-size: clamp(2.8rem, 4vw, 4rem);
   line-height: 0.95;
@@ -347,7 +347,7 @@
 .galeria-lightbox-close:hover,
 .galeria-lightbox-prev:hover,
 .galeria-lightbox-next:hover {
-  color: #4d63c7;
+  color: var(--color-accent);
 }
 
 

@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 import "./Galeria.css";
-import heroGaleria from "../../assets/images/hero-galeria.png";
+import heroGaleria from "../../assets/images/hero-galeria.jpg";
 
 import galeria01 from "../../assets/galeria/galeria-01.jpg";
 import galeria02 from "../../assets/galeria/galeria-02.jpg";
@@ -177,6 +177,8 @@ function Galeria() {
                                 <img
                                     src={foto.imagem}
                                     alt={`Registro musical ${foto.numero}`}
+                                    loading="lazy"
+                                    decoding="async"
                                 />
 
                             </button>

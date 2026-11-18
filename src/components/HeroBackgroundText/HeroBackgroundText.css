@@ -19,8 +19,11 @@
 
 .hero-background-text h2 {
     color: rgba(255, 255, 255, .35);
-    font-size: 5rem;
+    /* acompanha a largura da tela, até 80px */
+    font-size: clamp(3rem, 5.2vw, 5rem);
     font-weight: 700;
+    line-height: 1;
+    word-spacing: 4px;
     white-space: nowrap;
     letter-spacing: 2px;
     text-align: center;
@@ -45,18 +48,6 @@
 }
 
 /* =========================
-   HERO BACKGROUND TEXT - TABLET DEITADO / NOTEBOOK PEQUENO
-========================= */
-
-@media (min-width: 901px) and (max-width: 1280px) {
-
-    .hero-background-text h2 {
-        font-size: clamp(3rem, 6vw, 5rem);
-    }
-
-}
-
-/* =========================
    HERO BACKGROUND TEXT - TABLET
 ========================= */
 
@@ -68,7 +59,7 @@
     }
 
     .hero-background-text h2 {
-        font-size: clamp(2rem, 5.5vw, 3.2rem);
+        font-size: clamp(1.6rem, 5.2vw, 3.2rem);
         letter-spacing: 1px;
     }
 
@@ -105,7 +96,7 @@
   }
 
   .hero-background-text h2 {
-    font-size: clamp(1rem, 5.6vw, 1.4rem);
+    font-size: clamp(1rem, 5vw, 1.4rem);
     letter-spacing: 0.04em;
     white-space: nowrap;
     text-align: center;

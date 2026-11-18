@@ -60,7 +60,7 @@
 
     background: #11131a;
 
-    color: #4d63c7;
+    color: var(--color-accent);
 
     font-size: 1.7rem;
 }
@@ -77,7 +77,7 @@
 }
 
 .audio-card-year {
-    color: #4d63c7;
+    color: var(--color-accent);
 
     font-size: 0.75rem;
     font-weight: 600;
@@ -125,7 +125,7 @@
     width: 0%;
     height: 100%;
 
-    background: #4d63c7;
+    background: var(--color-accent);
 }
 
 /* TEMPO */
@@ -166,7 +166,7 @@
 }
 
 .audio-card-play:hover {
-    color: #4d63c7;
+    color: var(--color-accent);
 }
 
 /* SPOTIFY */
@@ -199,7 +199,7 @@
 .audio-card-spotify:hover {
     background: rgba(77, 99, 199, 0.12);
 
-    border-color: #4d63c7;
+    border-color: var(--color-accent);
 
     color: #ffffff;
 }

@@ -11,7 +11,8 @@
 
 }
 
-.hero h2 {
+.hero-title h1 {
+    font-family: var(--font-display);
     font-size: 3.7rem;
     font-weight: 700;
     word-spacing: 4px;
@@ -42,7 +43,7 @@
 }
 
 .blue {
-    color: #4D63C7;
+    color: var(--color-accent);
 }
 
 .hero-title {
@@ -141,7 +142,7 @@
         text-align: center;
     }
 
-    .hero-title h2 {
+    .hero-title h1 {
         font-size: clamp(2.3rem, 9vw, 3.2rem);
         line-height: 1;
         word-spacing: 2px;
@@ -176,7 +177,7 @@
         text-align: left;
     }
 
-    .hero-title h2 {
+    .hero-title h1 {
         font-size: clamp(2.5rem, 6vw, 3.4rem);
         line-height: 1;
         word-spacing: 3px;

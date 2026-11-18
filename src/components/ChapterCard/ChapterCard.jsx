@@ -11,7 +11,9 @@ function ChapterCard({
   return (
     <section className={`chapter-card ${imagePosition}`}>
       <div className={`chapter-image ${imageClass}`}>
-        {image && <img src={image} alt={alt} />}
+        {image && (
+          <img src={image} alt={alt} loading="lazy" decoding="async" />
+        )}
       </div>
 
       <div className="chapter-content">

@@ -106,7 +106,7 @@
 
 .footer-socials a:hover {
 
-    color: #4D63C7;
+    color: var(--color-accent);
 
     transform: translateY(-3px);
 
@@ -118,9 +118,9 @@
 
     background: transparent;
 
-    color: #4D63C7;
+    color: var(--color-accent);
 
-    border: 1px solid #4D63C7;
+    border: 1px solid var(--color-accent);
 
     padding: 15px 30px;
 
@@ -138,7 +138,7 @@
 
 .footer-button:hover {
 
-    background: #4D63C7;
+    background: var(--color-accent);
 
     color: #ffffff;
 

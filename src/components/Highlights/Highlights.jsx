@@ -2,10 +2,10 @@ import "./Highlights.css";
 import ChapterCard from "../ChapterCard/ChapterCard";
 import ChapterDivider from "../ChapterDivider/ChapterDivider";
 
-import discoOuro from "../../assets/images/disco-ouro.png";
-import michaelSullivan from "../../assets/images/michael-sullivan.png";
-import supernovaVida from "../../assets/images/supernovavida.png";
-import pingo from "../../assets/images/pingo.png";
+import discoOuro from "../../assets/images/disco-ouro.jpg";
+import michaelSullivan from "../../assets/images/michael-sullivan.jpg";
+import supernovaVida from "../../assets/images/supernovavida.jpg";
+import pingo from "../../assets/images/pingo.jpg";
 
 function Highlights() {
   return (

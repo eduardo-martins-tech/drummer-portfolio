@@ -33,6 +33,8 @@ function AudioCard({
           <img
             src={audio.cover}
             alt={`Capa de ${audio.title}`}
+            loading="lazy"
+            decoding="async"
           />
         ) : (
           <div className="audio-card-cover-placeholder">

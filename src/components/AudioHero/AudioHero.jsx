@@ -1,5 +1,5 @@
 import "./AudioHero.css";
-import drumsAudio from "../../assets/images/drums-audio.png";
+import drumsAudio from "../../assets/images/drums-audio.jpg";
 
 function AudioHero() {
     return (
