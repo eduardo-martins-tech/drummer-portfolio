@@ -286,8 +286,12 @@
     margin-top: 80px;
   }
 
+  /* FOTO: no tablet, sai do float e do deslocamento do desktop */
   .bio-story-image {
-    min-height: 700px;
+    float: none;
+    left: auto;
+    width: 100%;
+    margin: 0 0 40px;
   }
 
 
